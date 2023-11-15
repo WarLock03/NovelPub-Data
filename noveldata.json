@@ -1,0 +1,23 @@
+{
+  "data":[
+    {
+      "title":"",
+      "title_english":"",
+      "image_cover":"",
+      "status":"",
+      "type":"",
+      "translation_type":"",
+      "translation_group":"",
+      "genres":{
+        "name":""
+      },
+      "synopsis":"",
+      "volumes":[
+        {
+          "volume":"",
+          "download":""
+        }
+      ]
+    }
+  ]
+}
