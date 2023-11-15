@@ -1,21 +1,25 @@
 {
   "data":[
     {
-      "title":"",
-      "title_english":"",
-      "image_cover":"",
-      "status":"",
-      "type":"",
-      "translation_type":"",
-      "translation_group":"",
+      "title":"Danjo no Yuujou wa Seiritsu suru? (Iya, Shinai!!)",
+      "title_english":"Can friendship between men and women be established? (No, it can't!!)",
+      "image_cover":"https://cdn.novelupdates.com/images/2023/11/Danjo-no-Yuujou-wa-Seiritsu-suru-Iya-Shinai.jpg",
+      "status":"Ongoing",
+      "type":"Light Novel",
+      "translation_type":"Fan Translation",
+      "translation_group":"Hiraeth Translations",
+      "page_link":"https://hiraethtranslation.com/novel/danjo-no-yuujou-wa-seiritsu-suru-iya-shinai/",
       "genres":{
-        "name":""
+        "name":"Comedy",
+        "name":"Romance",
+        "name":"School Life",
+        "name":"Slice of Life"
       },
-      "synopsis":"",
+      "synopsis":"At a certain countryside middle school, a boy and a girl swore eternal friendship to each other.\n\nHeading towards that shared dream——the bond between these two remains unchanged over the span of two years.\n\nHimari Inuzuka, a cheerful girl who has yet to find her first love, and Yuu Natsume, a botanical enthusiast who loves flowers, still spend their days peacefully as best friends in the gardening club in the second year of high school.\n\n「If Yuu can’t get married, I have to take responsibility.」\n\n「I’m having trouble now because after Himari said that, your brother began calling me ‘My brother-in-law!’」\n\nHowever, when Yuu reunites with his first crush, the gears of their relationship suddenly go out of sync!\n\nWill Himari, now having known love, be able to break free from being just the ‘ideal friend’?",
       "volumes":[
         {
-          "volume":"",
-          "download":""
+          "volume":"Volume 1 (Unfinish)",
+          "download":"1-SuYzPS1Gs7cpzi1K7lbWrmchHuhTNTU"
         }
       ]
     }
