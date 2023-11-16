@@ -1,6 +1,27 @@
 {
   "data":[
     {
+      "title":"The Delinquent Shimizu-san Sitting Next to Me Has Dyed Her Hair Black",
+      "title_english":"The Delinquent Shimizu-san Sitting Next to Me Has Dyed Her Hair Black",
+      "image_cover":"https://hiraethtranslation.com/wp-content/uploads/2023/05/Shimizu.jpg",
+      "status":"Ongoing",
+      "type":"Light Novel",
+      "translation_type":"Fan Translation",
+      "translation_group":"Hiraeth Translations",
+      "page_link":"https://hiraethtranslation.com/novel/the-delinquent-shimizu-san-sitting-next-to-me-has-dyed-her-hair-black/",
+      "genres":{
+        "name":"Romance",
+        "name":"School Life",
+      },
+      "synopsis":"「Shimizu-san, you dyed your hair black.」\n\n「Ah, yes.」\n\n「Why did you dye it all of a sudden?」\n\n「Because…yesterday…」\n\nShimizu-san, who sat next to me and had dyed her hair from blonde to black gradually lowered her voice, slightly blushed, and laid her face down on the desk.",
+      "volumes":[
+        {
+          "volume":"Volume 1",
+          "download":"1-xBzbkpAlJy5LlpVw0AltWQ37ompVVrq"
+        }
+      ]
+    },
+    {
       "title":"Danjo no Yuujou wa Seiritsu suru? (Iya, Shinai!!)",
       "title_english":"Can friendship between men and women be established? (No, it can't!!)",
       "image_cover":"https://cdn.novelupdates.com/images/2023/11/Danjo-no-Yuujou-wa-Seiritsu-suru-Iya-Shinai.jpg",
@@ -22,6 +43,6 @@
           "download":"1-SuYzPS1Gs7cpzi1K7lbWrmchHuhTNTU"
         }
       ]
-    }
+    },
   ]
 }
