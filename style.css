@@ -57,14 +57,14 @@ body{
   text-align: center;
   padding: 20px 8px 20px 8px;
 }
-table, th, td{
+.table-item, .table-item2, th, td{
   border: 1px solid grey;
 }
-table{
+.table, .table2{
   margin-top: 20px;
   padding: 0;
 }
-table tr th{
+.table-item, .table-item2 tr th{
   padding: 8px;
   font-size: 15px;
   background-color: #0a2d8d;
@@ -72,16 +72,16 @@ table tr th{
   text-align: center;
   margin: 0;
 }
-table tr td{
+.table-item, .table-item2 tr td{
   font-size: 12px;
   padding: 8px;
   text-align: center;
 }
-table tr td a{
+.table-item, .table-item2 tr td a{
   text-decoration: none;
   color: darkblue;
 }
-table tr:nth-child(n+10){
+.table-item tr:nth-child(n+10){
   display: none;
 }
 .footer{
