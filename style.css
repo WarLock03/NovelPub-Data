@@ -54,6 +54,8 @@ body{
   align-items: center;
   font-size: 15px;
   color: red;
+  text-align: center;
+  padding: 20px 8px 20px 8px;
 }
 table, th, td{
   border: 1px solid grey;
