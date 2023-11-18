@@ -23,7 +23,7 @@ body{
   border-radius: 5px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .search-field > input[type=search]{
   width: auto;
