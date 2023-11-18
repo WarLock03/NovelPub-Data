@@ -81,8 +81,8 @@ table tr td a{
   text-decoration: none;
   color: darkblue;
 }
-table tr td:nth-child(1n < 5){
-  display: none;
+table tr td:nth-child(1n+5){
+  background-color: red;
 }
 .footer{
   max-width: 100%;
