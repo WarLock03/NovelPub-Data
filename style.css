@@ -64,7 +64,7 @@ body{
   margin-top: 20px;
   padding: 0;
 }
-.table-item, .table-item2 tr th{
+.table-item tr th, .table-item2 tr th{
   padding: 8px;
   font-size: 15px;
   background-color: #0a2d8d;
@@ -72,12 +72,12 @@ body{
   text-align: center;
   margin: 0;
 }
-.table-item, .table-item2 tr td{
+.table-item tr td, .table-item2 tr td{
   font-size: 12px;
   padding: 8px;
   text-align: center;
 }
-.table-item, .table-item2 tr td a{
+.table-item tr td a, .table-item2 tr td a{
   text-decoration: none;
   color: darkblue;
 }
