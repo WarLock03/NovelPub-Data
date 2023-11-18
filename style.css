@@ -60,7 +60,7 @@ body{
 .table-item, .table-item2, th, td{
   border: 1px solid grey;
 }
-.table, .table2{
+.table-item, .table-item2{
   margin-top: 20px;
   padding: 0;
 }
