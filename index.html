@@ -21,17 +21,45 @@
         </div>
       </div>
       
-      <table class="table-item">
+      <div id="items">
+      <table class="table-item" id="table-item">
         <th>Title</th>
         <th>Volume</th>
         <th>Download</th>
       </table>
+      </div>
       
       
       <script type="text/javascript">
         
+        let table = document.getElementById('table-item');
         
-        
+        fetch("https://warlock03.github.io/NovelPub-Data/data.json")
+        .then(response => response.json())
+        .then(data => {
+          
+          for(let i in data){
+            let tr1 = document.createElement("tr");
+            let tr2 = document.createElement("tr");
+            let tr3 = document.createElement("tr");
+            let a = document.createElement("a");
+            a.setAttribute("href","");
+            
+            a.textContent = "Download";
+            a.href = data[i].dlLink;
+            
+            tr1.textContent = data[i].title;
+            tr2.textContent = data[i].updateVolume;
+            tr3.appendChild(a);
+            
+            table.appendChild(tr1);
+            table.appendChild(tr2);
+            table.appendChild(tr3);
+            
+          }
+          
+        })
+        .catch(error => console.log(error))
       </script>
     </div>
   </body>
