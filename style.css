@@ -56,14 +56,14 @@ table{
 }
 table tr th{
   padding: 8px;
-  font-size: 12px;
+  font-size: 15px;
   background-color: #0a2d8d;
   color: white;
   text-align: center;
   margin: 0;
 }
 table tr td{
-  font-size: 12px;
+  font-size: 14px;
   padding: 8px;
 }
 table tr td a{
