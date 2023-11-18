@@ -81,7 +81,7 @@ table tr td a{
   text-decoration: none;
   color: darkblue;
 }
-table tr td:nth-child(5n-1){
+table tr:nth-child(5n-1){
   display: none;
 }
 .footer{
