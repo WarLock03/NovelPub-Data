@@ -63,8 +63,9 @@ table tr th{
   margin: 0;
 }
 table tr td{
-  font-size: 13px;
+  font-size: 12px;
   padding: 8px;
+  text-align: center;
 }
 table tr td a{
   text-decoration: none;
