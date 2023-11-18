@@ -46,11 +46,21 @@ body{
 table{
   margin-top: 20px;
   border: 1px solid grey;
+  padding: 0;
 }
 table th{
   padding: 8px;
-  font-size: 15px;
+  font-size: 12px;
   background-color: #0a2d8d;
   color: white;
   text-align: center;
+  margin: 0;
+}
+table tr{
+  font-size: 12px;
+  padding: 8px;
+}
+table tr a{
+  text-decoration: none;
+  color: darkblue;
 }
