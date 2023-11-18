@@ -68,6 +68,8 @@ table tr td a{
 }
 .footer{
   max-width: 100%;
+  margin-top: 50em;
+  display: flex;
 }
 .footer p{
   font-size: 8px;
