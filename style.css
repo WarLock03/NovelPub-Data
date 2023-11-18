@@ -24,6 +24,7 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
 }
 .search-field > input[type=search]{
   width: auto;
@@ -32,6 +33,6 @@ body{
   padding: 10px;
 }
 .search-field > i{
-  width: inherit;
-  height: inherit;
+  width: 50px;
+  height: 50px;
 }
