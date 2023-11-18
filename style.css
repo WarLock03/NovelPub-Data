@@ -32,6 +32,6 @@ body{
   padding: 10px;
 }
 .search-field > i{
-  width: auto;
-  height: auto;
+  width: inherit;
+  height: inherit;
 }
