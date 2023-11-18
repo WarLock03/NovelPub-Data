@@ -43,9 +43,11 @@ body{
 .search-field > .search-icon i{
   font-size: 20px;
 }
+table, th, td{
+  border: 1px solid grey;
+}
 table{
   margin-top: 20px;
-  border: 1px solid grey;
   padding: 0;
 }
 table tr th{
