@@ -66,3 +66,9 @@ table tr td a{
   text-decoration: none;
   color: darkblue;
 }
+.footer{
+  max-width: 100%;
+}
+.footer p{
+  font-size: 8px;
+}
