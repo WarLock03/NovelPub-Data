@@ -23,6 +23,7 @@ body{
   border-radius: 5px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 .search-field > input[type=search]{
   width: inherit;
