@@ -48,7 +48,7 @@ table{
   border: 1px solid grey;
   padding: 0;
 }
-table th{
+table tr th{
   padding: 8px;
   font-size: 12px;
   background-color: #0a2d8d;
@@ -56,11 +56,11 @@ table th{
   text-align: center;
   margin: 0;
 }
-table tr{
+table tr td{
   font-size: 12px;
   padding: 8px;
 }
-table tr a{
+table tr td a{
   text-decoration: none;
   color: darkblue;
 }
