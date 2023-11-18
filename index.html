@@ -41,22 +41,24 @@
         .then(data => {
           
           for(let i in data){
-            let tr1 = document.createElement("tr");
-            let tr2 = document.createElement("tr");
-            let tr3 = document.createElement("tr");
+            let tr = document.createElement("tr");
+            let td1 = document.createElement("td");
+            let td2 = document.createElement("td");
+            let td3 = document.createElement("td");
             let a = document.createElement("a");
             a.setAttribute("href","");
             
             a.textContent = "Download";
             a.href = data[i].dlLink;
             
-            tr1.textContent = data[i].title;
-            tr2.textContent = data[i].updateVolume;
-            tr3.appendChild(a);
+            td1.textContent = data[i].title;
+            td2.textContent = data[i].updateVolume;
+            td3.appendChild(a);
             
-            table.appendChild(tr1);
-            table.appendChild(tr2);
-            table.appendChild(tr3);
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            table.appendChild(tr);
             
           }
           
