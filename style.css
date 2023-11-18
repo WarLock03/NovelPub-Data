@@ -28,6 +28,8 @@ body{
 .search-field > input[type=search]{
   width: auto;
   height: 100%;
+  border: none;
+  padding: 10px;
 }
 .search-field > i{
   width: auto;
