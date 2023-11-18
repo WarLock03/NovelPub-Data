@@ -43,3 +43,14 @@ body{
 .search-field > .search-icon i{
   font-size: 20px;
 }
+.table{
+  margin-top: 20px;
+  border: 1px solid grey;
+}
+.table > th{
+  padding: 8px;
+  font-size: 15px;
+  background-color: #0a2d8d;
+  color: white;
+  text-align: center;
+}
