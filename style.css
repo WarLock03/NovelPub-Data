@@ -81,7 +81,7 @@ table tr td a{
   text-decoration: none;
   color: darkblue;
 }
-table tr:nth-of-type(n+15){
+table tr:nth-child(n+10){
   display: none;
 }
 .footer{
