@@ -16,3 +16,19 @@ body{
   align-items: center;
   max-width: inherit;
 }
+.search-field{
+  max-width: 30em;
+  height: auto;
+  border: 1px solid grey;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+}
+.search-field > input[type=search]{
+  width: inherit;
+  height: 100%;
+}
+.search-field > i{
+  width: auto;
+  height: auto;
+}
