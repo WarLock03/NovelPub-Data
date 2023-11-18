@@ -43,6 +43,10 @@ body{
 .search-field > .search-icon i{
   font-size: 20px;
 }
+.text{
+  width: 100%;
+  text-align: center;
+}
 table, th, td{
   border: 1px solid grey;
 }
