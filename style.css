@@ -70,6 +70,7 @@ table tr td a{
   max-width: 100%;
   margin-top: 50em;
   display: flex;
+  margin: 8px;
 }
 .footer p{
   font-size: 8px;
