@@ -95,7 +95,7 @@ body{
 }
 .footer{
   max-width: 100%;
-  margin-top: 50em;
+  margin-top: 10em;
   display: flex;
   flex-flow: column;
   justify-content: center;
