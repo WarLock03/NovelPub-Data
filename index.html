@@ -124,7 +124,9 @@
             a.setAttribute("target","_blank");
             a2.setAttribute("target","_blank");
             let coverImage = document.createElement("img");
+            let coverImage2 = document.createElement("img");
             coverImage.setAttribute("src","");
+            coverImage2.setAttribute("src","");
            // cover.setAttribute("alt","");
             
             a.textContent = "Download";
@@ -132,6 +134,7 @@
             a.href = data[i].dlLink;
             a2.href = data[i].dlLink;
             coverImage.src = data[i].cover;
+            coverImage2.src = data[i].cover;
             
             td2.textContent = data[i].title;
             td6.textContent = data[i].title;
@@ -142,7 +145,7 @@
             td4.appendChild(a);
             td8.appendChild(a2);
             td1.appendChild(coverImage);
-            td5.appendChild(coverImage);
+            td5.appendChild(coverImage2);
             
             tr.appendChild(td1);
             tr.appendChild(td2);
