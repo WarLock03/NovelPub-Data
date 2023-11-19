@@ -87,16 +87,21 @@ body{
   text-decoration: none;
   color: darkblue;
 }
-.table-item tr:nth-child(n+10){
+/*.table-item tr:nth-child(n+10){
   display: none;
 }
 .table-item2{
   display: none;
-}
+}/
 .footer{
   max-width: 100%;
   margin-top: 50em;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
 .footer p{
   font-size: 8px;
+  text-align: center;
 }
