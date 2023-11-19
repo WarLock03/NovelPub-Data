@@ -111,21 +111,25 @@
   },
   {
     "title": "Date A Live: Encore",
-    "updateVolume":"1-7",
+    "cover":"https://static.wikia.nocookie.net/date-a-live/images/7/7b/DAL_vE11_cov.jpg/revision/latest?cb=20220428063010",
+    "updateVolume":"1-11",
     "dlLink":"https://drive.google.com/drive/folders/19v0__WN31NKpG_iHFnay4z5E1izYLK7l"
   },
   {
-    "title": "Date A Live: Fragment",
+    "title": "Date A Bullet",
+    "cover":"https://static.wikia.nocookie.net/date-a-live/images/6/60/Date_A_Bullet_Volume_8_Cover.jpg/revision/latest?cb=20211227071219",
     "updateVolume":"1-8",
     "dlLink":"https://drive.google.com/drive/folders/19zP3gqaXa1udEVKt-4XGKfTKJGVTrg_4l"
   },
   {
     "title": "Cross-Dressing Villainess Cecilia Sylvie",
+    "cover":"https://images.yenpress.com/imgs/9781975368609.jpg?w=408&h=612&type=books&s=6ab3e1cee0b5821a000cf256e22497b1",
     "updateVolume":"1-5",
     "dlLink":"https://drive.google.com/drive/folders/1pAR4oUf-Qaz9faWVxnclBXflc9fOFUpb"
   },
   {
     "title": "Only I Know the Ghoul Saved the World",
+    "cover":"https://images.yenpress.com/imgs/9781975367534.jpg?w=408&h=612&type=books&s=7b337892b579b6f496fb21421a54c234",
     "updateVolume":"1",
     "dlLink":"https://drive.google.com/drive/folders/1IRs8cZtSqS36B1SYAEqN0oHw1w3UNS_m"
   },
