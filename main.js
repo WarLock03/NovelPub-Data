@@ -16,7 +16,7 @@
 }*/
 $(document).ready(function(){
   let rowLimit = 10;
-  $('table > #tbody > tr:gt(' + (rowLimit - 1) + ')');
+  $('table > tbody > tr:gt(' + (rowLimit - 1) + ')');
   
   let table = $('#table-item');
   
