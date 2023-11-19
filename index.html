@@ -120,12 +120,16 @@
           // Declare variables
           var input, filter, tr, td, i, txtValue;
           input = document.getElementById("search");
-          filter = input.value.toUpperCase();
-          tr = table2.getElementsByTagName("tr");
-          table.style.display = "none";
-          table2.style.display = "block";
-          // Loop through all table rows, and hide those who don't match the search query
-          for (i = 0; i < tr.length; i++) {
+          if(input.value == ""){
+            table.style.display = "block";
+            table2.style.display = "none";
+          }else{
+            filter = input.value.toUpperCase();
+            tr = table2.getElementsByTagName("tr");
+            table.style.display = "none";
+            table2.style.display = "block";
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
               td = tr[i].getElementsByTagName("td")[0];
               if (td) {
                   txtValue = td.textContent || td.innerText;
@@ -135,6 +139,7 @@
                       tr[i].style.display = "none";
                   }
               }
+            }
           }
         }
       </script>
