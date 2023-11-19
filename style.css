@@ -95,7 +95,7 @@ body{
   display: none;
 }
 .table-item2{
-  display: none;
+  display: block;
 }
 .footer{
   max-width: 100%;
