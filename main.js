@@ -1,4 +1,4 @@
-function showAllData(){
+/*function showAllData(){
   let table = document.getElementById('table-item');
   let table2 = document.getElementById('table-item2');
   let showAll = document.getElementById('showAll');
@@ -13,4 +13,15 @@ function showAllData(){
     showAll.innerText = "‹‹ Show All ››";
   }
   
-}
+}*/
+$(document).ready(function(){
+  let rowLimit = 10;
+  $('table > #tbody > tr:gt(' + (rowLimit - 1) + ')');
+  
+  let table = $('#table-item');
+  
+  $('#showAll').click(function(){
+    table.add
+  });
+  
+});
