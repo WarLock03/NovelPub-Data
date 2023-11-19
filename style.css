@@ -87,9 +87,9 @@ body{
   text-decoration: none;
   color: darkblue;
 }
-/*.table-item tr:nth-child(n+10){
+.table-item tr:nth-child(n+10){
   display: none;
-}*/
+}
 .table-item2{
   display: none;
 }
