@@ -1,4 +1,4 @@
-/*function showAllData(){
+function showAllData(){
   let table = document.getElementById('table-item');
   let table2 = document.getElementById('table-item2');
   let showAll = document.getElementById('showAll');
@@ -13,4 +13,4 @@
     showAll.innerText = "‹‹ Show All ››";
   }
   
-}*/
+}
