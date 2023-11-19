@@ -88,7 +88,7 @@ body{
   color: darkblue;
 }
 .table-item tr td img, .table-item2 tr td img{
-  width: 70px;
+  width: 55px;
   height: auto;
 }
 .table-item tr:nth-child(n+20){
