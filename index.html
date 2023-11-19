@@ -46,16 +46,16 @@
        <div class="status" id="responseStatus"></div>
       <table class="table-item" id="table-item">
         <tr>
-          <th>Cover</th>
           <th>Title</th>
+          <th>Cover</th>
           <th>Volume</th>
           <th>Download</th>
         </tr>
       </table>
       <table class="table-item2" id="table-item2">
         <tr>
-          <th>Cover</th>
           <th>Title</th>
+          <th>Cover</th>
           <th>Volume</th>
           <th>Download</th>
         </tr>
@@ -134,16 +134,16 @@
             coverImage.src = data[i].cover;
             coverImage2.src = data[i].cover;
             
-            td2.textContent = data[i].title;
-            td6.textContent = data[i].title;
+            td1.textContent = data[i].title;
+            td5.textContent = data[i].title;
             td3.textContent = data[i].updateVolume;
             td7.textContent = data[i].updateVolume;
            // cover.alt = data[i].title;
             
             td4.appendChild(a);
             td8.appendChild(a2);
-            td1.appendChild(coverImage);
-            td5.appendChild(coverImage2);
+            td2.appendChild(coverImage);
+            td6.appendChild(coverImage2);
             
             tr.appendChild(td1);
             tr.appendChild(td2);
@@ -179,7 +179,8 @@
             table.style.display = "none";
             table2.style.display = "block";
             filter = input.value.toUpperCase();
-            tr = table2.getElementsByTagName("tr");
+            tr = $("#table-item2 tr");
+            //tr = table2.getElementsByTagName("tr");
             // Loop through all table rows, and hide those who don't match the search query
             for (i = 0; i < tr.length; i++) {
               td = tr[i].getElementsByTagName("td")[0];
