@@ -79,6 +79,11 @@
           if(!response.ok){
             const message = "Could not fetch data from server. Please try to refresh page or contact the developer";
             throw new Error(message);
+          }else{
+            const ads = document.getElementById('responseStatus');
+            ads.style.display = "block";
+            ads.style.color = "black";
+            ads.innerHTML = "Support The 4 Sigils author by buying the book on <a href='https://www.amazon.com/dp/B09B4BDYNV'>Amazon</a> & <a href='https://www.goodreads.com/book/show/76752875-the-4-sigils'>Goodreads.com</a>";
           }
           
           const data = await response.json();
