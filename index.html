@@ -51,7 +51,6 @@
           <th>Volume</th>
           <th>Download</th>
         </tr>
-        <tbody id="tbody"></tbody>
       </table>
       <table class="table-item2" id="table-item2">
         <tr>
@@ -60,11 +59,10 @@
           <th>Volume</th>
           <th>Download</th>
         </tr>
-        <tbody id="tbody2"></tbody>
       </table>
       </div>
       
-      <div class="container-fluid d-flex justify-content-center text-primary" style="margin-top:15px;text-decoration:underline;" id="showAll" onclick="showAllData()">‹‹ Show All ››</div>
+      <!--<div class="container-fluid d-flex justify-content-center text-primary" style="margin-top:15px;text-decoration:underline;" id="showAll" onclick="showAllData()">‹‹ Show All ››</div> -->
       
       <div class="footer">
         <p><a href="#">Terms & Privacy</a></p>
@@ -79,8 +77,8 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="text/javascript">
         
-        let table = document.getElementById('tbody');
-        let table2 = document.getElementById('tbody2');
+        let table = document.getElementById('table-item');
+        let table2 = document.getElementById('table-item2');
         
         async function loadData(){
           const response = await fetch("https://warlock03.github.io/NovelPub-Data/data.json");
