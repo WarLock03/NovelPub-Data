@@ -141,9 +141,15 @@
           // Declare variables
           var input, filter, tr, td, i, txtValue;
           input = document.getElementById("search");
-          filter = input.value.toUpperCase();
+          if(input.value == ""){
+            table.style.display = "block";
+            table2.style.display = "none";
+          }else{
+            filter = input.value.toUpperCase();
             tr = table.getElementsByTagName("tr");
- 
+            
+            table.style.display = "block";
+            table2.style.display = "none";
             // Loop through all table rows, and hide those who don't match the search query
             for (i = 0; i < tr.length; i++) {
               td = tr[i].getElementsByTagName("td")[0];
@@ -156,6 +162,7 @@
                   }
               }
             }
+          }
         }
       </script>
       <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
