@@ -47,6 +47,12 @@ body{
   width: 100%;
   text-align: center;
 }
+.social{
+  text-align: center;
+}
+.media{
+  margin: 8px;
+}
 .status{
   max-width: 100%;
   display: none;
