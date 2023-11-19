@@ -1,8 +1,9 @@
 let itemTable = document.getElementById('table-item');
 let tableRow = itemTable.querySelectorAll('tr');
-tableRow.forEach(row, () => {
-  row.addEventListener("click", () => {
-    row.setAttribute("data-bs-toggle","modal");
-    row.setAttribute("data-bs-target","#myModal");
+
+for(let i in tableRow){
+  tableRow[i].addEventListener('click', function(){
+    tableRow[i].setAttribute("data-bs-toggle","modal");
+    tableRow[i].setAttribute("data-bs-target","#myModal");
   });
-});
+}
