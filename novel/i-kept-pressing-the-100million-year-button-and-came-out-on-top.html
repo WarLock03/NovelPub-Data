@@ -152,7 +152,8 @@
   	    imageDoc = allData.images.jpg.image_url;
   	    urlDoc = window.location.href;
   	    descriptionDoc = allData.synopsis;
-  	    
+  	    //Page meta
+  	    document.title = allData.title;
   	    $("meta[name=title]").attr("content", titleDoc);
       $("meta[property=og\\:title]").attr("content", titleDoc);
       $("meta[name=image]").attr("content", imageDoc);
@@ -179,9 +180,6 @@
   	    }
   	    
   	    synopsisText.textContent = allData.synopsis;
-  	    
-  	    //Page meta
-  	    document.title = allData.title;
   	    
   	  }).catch(error => console.log(error));
    });
