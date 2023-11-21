@@ -114,7 +114,7 @@
   <script type="text/javascript">
   $(document).ready(function(){
   	  async function fetchData(){
-  	    const response = await fetch("https://www.novelpubfile.xyz/noveldata.json");
+  	    const response = await fetch("https://warlock03.github.io/NovelPub-Data/noveldata.json");
   	    if(!response.ok){
   	      const error = response.message;
   	      throw new Error(error);
@@ -136,7 +136,7 @@
   	    synopsisText = document.getElementById('synopsis');
   	    
   	    let allData = data.data;
-  	    cover.src = allData.images.jpg.large_image_url;
+  	    cover.src = allData.cover_image;
   	    title.textContent = allData.title;
   	    
   	    let titleDoc, imageDoc, urlDoc, descriptionDoc;
