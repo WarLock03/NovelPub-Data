@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NovelPub</title>
-    <meta name="title" content="NovelPub"/>
-    <meta name="description" content="Download Novels for Free without ads"/>
-    <meta name="url" content="https://www.novelpubfile.xyz/"/>
-    <meta name="image" content="https://www.novelpubfile.xyz/novelpub-logo512.png"/>
+    <meta name="title" content=""/>
+    <meta name="description" content=""/>
+    <meta name="url" content=""/>
+    <meta name="image" content=""/>
     <meta name="type" content="website"/>
     <!-- Facebook Meta Tags -->
     <meta property="og:title" content=""/>
@@ -146,6 +146,8 @@
   	    title.textContent = allData.title;
   	    titleEnglish.textContent = "("+allData.title_english+")";
   	    document.title = allData.title;
+  	    document.querySelectorAll('meta[name=title]')[0].setAttribute('content', allData.title);
+  	    document.querySelectorAll('meta[name=description]')[0].setAttribute('content', allData.synopsis);
   	    document.querySelectorAll('meta[property=og\\:title]')[0].setAttribute('content', allData.title);
   	    document.querySelectorAll('meta[property=og\\:description]')[0].setAttribute('content', allData.synopsis);
   	    document.querySelectorAll('meta[property=og\\:image]')[0].setAttribute('content', allData.images.jpg.large_image_url);
