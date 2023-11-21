@@ -154,13 +154,15 @@
   	    descriptionDoc = allData.synopsis;
   	    
   	    $("meta[name=title]").attr("content", titleDoc);
-      $("meta[property=og:title]").attr("content", titleDoc);
+      $("meta[property=og\\:title]").attr("content", titleDoc);
       $("meta[name=image]").attr("content", imageDoc);
-      $("meta[property=og:image]").attr("content", imageDoc);
+      $("meta[property=og\\:image]").attr("content", imageDoc);
       $("meta[name=description]").attr("content", descriptionDoc);
-      $("meta[property=og:description]").attr("content", descriptionDoc);
+      $("meta[property=og\\:description]").attr("content", descriptionDoc);
       $("meta[name=url]").attr("content", urlDoc);
-      $("meta[property=og:url]").attr("content", urlDoc);
+      $("meta[property=og\\:url]").attr("content", urlDoc);
+      
+      alert($("meta[property=og\\:image]").attr("content"))
       
   	    let allTitles = allData.titles;
   	    for(let listTitle in allTitles){
