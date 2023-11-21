@@ -7,72 +7,72 @@
     <meta name="title" content=""/>
     <meta name="description" content=""/>
     <meta name="url" content=""/>
-    <meta name="image" content=""/>
+    <meta name="image" content="https://images.yenpress.com/imgs/9781975343200.jpg?w=408&h=612&type=books&s=a470809bdbf5ebbb44939136908a047c"/>
     <meta name="type" content="website"/>
     <!-- Facebook Meta Tags -->
     <meta property="og:title" content=""/>
     <meta property="og:description" content="Download Novels for Free without ads"/>
     <meta property="og:url" content=""/>
     <meta property="og:type" content="website"/>
-    <meta property="og:image" content=""/>
+    <meta property="og:image" content="https://images.yenpress.com/imgs/9781975343200.jpg?w=408&h=612&type=books&s=a470809bdbf5ebbb44939136908a047c"/>
     
     <link rel="icon" href="https://www.novelpubfile.xyz/novelpub-logo512.png" size="512x512"/>
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://www.novelpubfile.xyz/style.css">
-  <style>
-    .page-content{
-      margin-top: 40px;
-      max-width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .page-content #cover{
-      width: 200px;
-      height: auto;
-      border-radius: 8px;
-    }
-    .page-content h3, p{
-      text-align: center;
-    }
-    .page-content h3{
-      margin: 8px 5px 5px 5px;
-    }
-    .page-content p{
-      margin: 0;
-      padding: 5px;
-      font-style: italic;
-      font-size: 13px;
-    }
-    .page-details{
-      max-width: 100%;
-      margin: 8px 0;
-      padding: 0;
-    }
-    .page-details p{
-      text-align: left;
-      font-size: 14px;
-      padding: 5px;
-      margin: 0;
-    }
-    .page-details p span{
-      font-size: 13px;
-    }
-    .page-details ol{
-      list-style-type: none;
-      padding: 0 10px;
-      margin: 0 10px;
-    }
-    .page-details ol li{
-      font-size: 12px;
-    }
-    .page-details #genreList{
-      display: flex;
-      flex-direction: row;
-    }
-  </style>
+    <style>
+      .page-content{
+        margin-top: 40px;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .page-content #cover{
+        width: 200px;
+        height: auto;
+        border-radius: 8px;
+      }
+      .page-content h3, p{
+        text-align: center;
+      }
+      .page-content h3{
+        margin: 8px 5px 5px 5px;
+      }
+      .page-content p{
+        margin: 0;
+        padding: 5px;
+        font-style: italic;
+        font-size: 13px;
+      }
+      .page-details{
+        max-width: 100%;
+        margin: 8px 0;
+        padding: 0;
+      }
+      .page-details p{
+        text-align: left;
+        font-size: 14px;
+        padding: 5px;
+        margin: 0;
+      }
+      .page-details p span{
+        font-size: 13px;
+      }
+      .page-details ol{
+        list-style-type: none;
+        padding: 0 10px;
+        margin: 0 10px;
+      }
+      .page-details ol li{
+        font-size: 12px;
+      }
+      .page-details #genreList{
+        display: flex;
+        flex-direction: row;
+      }
+    </style>
   </head>
   <body>
     
@@ -146,6 +146,12 @@
   	    title.textContent = allData.title;
   	    titleEnglish.textContent = "("+allData.title_english+")";
   	    
+  	    var titleDoc, imageDoc, urlDoc, descriptionDoc;
+  	    titleDoc = allData.title;
+  	    imageDoc = allData.images.jpg.image_url;
+  	    urlDoc = window.location.href;
+  	    descriptionDoc = allData.synopsis;
+  	    
   	    let allTitles = allData.titles;
   	    for(let listTitle in allTitles){
   	      let titleList_item = document.createElement("li");
@@ -165,31 +171,22 @@
   	    
   	    //Page meta
   	    document.title = allData.title;
-  	    let titleDoc = document.createElement('meta');
-  	    let imageDoc = document.createElement('meta');
-  	    
-  	    titleDoc.setAttribute('name','title');
-  	    titleDoc.setAttribute('content','');
-  	    imageDoc.setAttribute('name','image');
-  	    imageDoc.setAttribute('content','');
-  	   
-  	    titleDoc.content = allData.title;
-  	    imageDoc.content = allData.images.jpg.image_url;
-  	    
-  	    //FB meta
-  	    let titleDocFB = document.createElement('meta');
-  	    let imageDocFB = document.createElement('meta');
-  	    
-  	    titleDocFB.setAttribute('property','og:title');
-  	    titleDocFB.setAttribute('content','');
-  	    imageDocFB.setAttribute('property','og:image');
-  	    imageDocFB.setAttribute('content','');
-  	    
-  	    titleDocFB.content = allData.title;
-  	    imageDocFB.content = allData.images.jpg.image_url;
   	    
   	  }).catch(error => console.log(error));
-  	  
+  </script>
+  <script>
+    $(document).ready(function(){
+      
+      $("meta[name=title]").attr("content", titleDoc);
+      $("meta[property=og\\:title]").attr("content", titleDoc);
+      $("meta[name=image]").attr("content", imageDoc);
+      $("meta[property=og\\:image]").attr("content", imageDoc);
+      $("meta[name=description]").attr("content", descriptionDoc);
+      $("meta[property=og\\:description]").attr("content", descriptionDoc);
+      $("meta[name=url]").attr("content", urlDoc);
+      $("meta[property=og\\:url]").attr("content", urlDoc);
+      
+    })
   </script>
   </body>
 </html>
