@@ -10,11 +10,11 @@
     <meta name="image" content="https://www.novelpubfile.xyz/novelpub-logo512.png"/>
     <meta name="type" content="website"/>
     <!-- Facebook Meta Tags -->
-    <meta name="og:title" content="NovelPub"/>
-    <meta name="og:description" content="Download Novels for Free without ads"/>
-    <meta name="og:url" content="https://www.novelpubfile.xyz/"/>
-    <meta name="og:image" content="https://www.novelpubfile.xyz/novelpub-logo512.png"/>
-    <meta name="og:type" content="website"/>
+    <meta property="og:title" content=""/>
+    <meta property="og:description" content="Download Novels for Free without ads"/>
+    <meta property="og:url" content=""/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content=""/>
     
     <link rel="icon" href="https://www.novelpubfile.xyz/novelpub-logo512.png" size="512x512"/>
     <!-- Bootstrap CSS CDN -->
@@ -145,6 +145,12 @@
   	    cover.src = allData.images.jpg.large_image_url;
   	    title.textContent = allData.title;
   	    titleEnglish.textContent = "("+allData.title_english+")";
+  	    document.title = allData.title;
+  	    document.querySelectorAll('meta[property=og\\:title]')[0].setAttribute('content', allData.title);
+  	    document.querySelectorAll('meta[property=og\\:description]')[0].setAttribute('content', allData.synopsis);
+  	    document.querySelectorAll('meta[property=og\\:image]')[0].setAttribute('content', allData.images.jpg.large_image_url);
+  	    document.querySelectorAll('meta[name=:url]')[0].setAttribute('content', window.location.href);
+  	    document.querySelectorAll('meta[property=og\\:url]')[0].setAttribute('content', window.location.href);
   	    let allTitles = allData.titles;
   	    for(let listTitle in allTitles){
   	      let titleList_item = document.createElement("li");
