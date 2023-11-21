@@ -146,6 +146,16 @@
   	    title.textContent = allData.title;
   	    titleEnglish.textContent = "("+allData.title_english+")";
   	    document.title = allData.title;
+  	    let imageDoc = document.createElement('meta');
+  	    imageDoc.setAttribute('name','image');
+  	    imageDoc.setAttribute('content','');
+  	    let imageDocFB = document.createElement('meta');
+  	    imageDocFB.setAttribute('property','og:image');
+  	    imageDocFB.setAttribute('content','');
+  	    
+  	    imageDoc.content = allData.images.jpg.image_url;
+  	    imageDocFB.content = allData.images.jpg.image_url;
+  	    
   	    let allTitles = allData.titles;
   	    for(let listTitle in allTitles){
   	      let titleList_item = document.createElement("li");
