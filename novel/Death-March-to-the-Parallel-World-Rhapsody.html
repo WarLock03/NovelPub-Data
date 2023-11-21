@@ -145,6 +145,23 @@
   	    cover.src = allData.images.jpg.large_image_url;
   	    title.textContent = allData.title;
   	    titleEnglish.textContent = "("+allData.title_english+")";
+  	    
+  	    let titleDoc, imageDoc, urlDoc, descriptionDoc;
+  	    titleDoc = allData.title;
+  	    imageDoc = allData.images.jpg.image_url;
+  	    urlDoc = window.location.href;
+  	    descriptionDoc = allData.synopsis;
+  	    //Page meta
+  	    document.title = allData.title;
+  	    $("meta[name=title]").attr("content", titleDoc);
+      $("meta[property=og\\:title]").attr("content", titleDoc);
+      $("meta[name=image]").attr("content", imageDoc);
+      $("meta[property=og\\:image]").attr("content", imageDoc);
+      $("meta[name=description]").attr("content", descriptionDoc);
+      $("meta[property=og\\:description]").attr("content", descriptionDoc);
+      $("meta[name=url]").attr("content", urlDoc);
+      $("meta[property=og\\:url]").attr("content", urlDoc);
+  	    
   	    let allTitles = allData.titles;
   	    for(let listTitle in allTitles){
   	      let titleList_item = document.createElement("li");
