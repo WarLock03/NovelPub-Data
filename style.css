@@ -50,6 +50,7 @@ input[type=search]{
 	outline: none;
 	border: none;
 	padding: 8px;
+	background-color: transparent;
 }
 #search-list{
   width: 290px;
