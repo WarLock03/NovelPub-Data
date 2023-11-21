@@ -145,16 +145,6 @@
   	    cover.src = allData.images.jpg.large_image_url;
   	    title.textContent = allData.title;
   	    titleEnglish.textContent = "("+allData.title_english+")";
-  	    document.title = allData.title;
-  	    let imageDoc = document.createElement('meta');
-  	    imageDoc.setAttribute('name','image');
-  	    imageDoc.setAttribute('content','');
-  	    let imageDocFB = document.createElement('meta');
-  	    imageDocFB.setAttribute('property','og:image');
-  	    imageDocFB.setAttribute('content','');
-  	    
-  	    imageDoc.content = allData.images.jpg.image_url;
-  	    imageDocFB.content = allData.images.jpg.image_url;
   	    
   	    let allTitles = allData.titles;
   	    for(let listTitle in allTitles){
@@ -172,6 +162,31 @@
   	    }
   	    
   	    synopsisText.textContent = allData.synopsis;
+  	    
+  	    //Page meta
+  	    document.title = allData.title;
+  	    let titleDoc = document.createElement('meta');
+  	    let imageDoc = document.createElement('meta');
+  	    
+  	    titleDoc.setAttribute('name','title');
+  	    titleDoc.setAttribute('content','');
+  	    imageDoc.setAttribute('name','image');
+  	    imageDoc.setAttribute('content','');
+  	   
+  	    titleDoc.content = allData.title;
+  	    imageDoc.content = allData.images.jpg.image_url;
+  	    
+  	    //FB meta
+  	    let titleDocFB = document.createElement('meta');
+  	    let imageDocFB = document.createElement('meta');
+  	    
+  	    titleDocFB.setAttribute('property','og:title');
+  	    titleDocFB.setAttribute('content','');
+  	    imageDocFB.setAttribute('property','og:image');
+  	    imageDocFB.setAttribute('content','');
+  	    
+  	    titleDocFB.content = allData.title;
+  	    imageDocFB.content = allData.images.jpg.image_url;
   	    
   	  }).catch(error => console.log(error));
   	  
