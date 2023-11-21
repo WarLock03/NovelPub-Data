@@ -1,229 +1,128 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>NovelPub</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="title" content="NovelPub"/>
-    <meta name="description" content="Download Novels for Free"/>
-    <meta name="type" content="website"/>
-    <meta name="url" content="https://warlock03.github.io/NovelPub-Data/"/>
-    <meta name="image" content="https://warlock03.github.io/NovelPub-Data/novelpub-logo512.png"/>
-    <meta name="og:title" content="NovelPub"/>
-    <meta name="og:description" content="Download Novels for Free"/>
-    <meta name="og:type" content="website"/>
-    <meta name="og:image" content="https://warlock03.github.io/NovelPub-Data/novelpub-logo512.png"/>
-    <meta name="og:url" content="https://warlock03.github.io/NovelPub-Data/"/>
-    <link href="novelpub-logo512.png" rel="icon" sizes="512x512"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet"/>
-    <link href="novelpub.css" rel="stylesheet"/>
-    <script src="https://kit.fontawesome.com/12a482ddfd.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <div class="container">
-      
-      <h3 class="text">Welcome and thank you for using this site. Please enjoy downloading novels for free</h3>
-      
-      <div class="social">
-        <hr/>
-        <small>Support Us</small>
-        <div class="media">
-          <a href='https://ko-fi.com/G2G3BK1D2' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
-          <a href='https://sociabuzz.com/warlock_03/donate' target='_blank'><img height='36' style='border:0px;height:36px;' src='images.jpeg' border='0' alt='Buy Me a Coffee at sociabuzz.com' /></a>
-          </a>
-        </div>
-        <hr/>
-      </div>
-      
-      <div class="search-field">
-        <input type="search" name="search" id="search" placeholder="Search novel here..." onkeyup="myFunction()"/>
-        <div class="search-icon">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
-      </div>
-      
-      <div id="items">
-       <div class="status" id="responseStatus"></div>
-      <table class="table-item" id="table-item">
-        <tr>
-          <th>Title</th>
-          <th>Cover</th>
-          <th>Volume</th>
-          <th>Download</th>
-        </tr>
-      </table>
-      <table class="table-item2" id="table-item2">
-        <tr>
-          <th>Title</th>
-          <th>Cover</th>
-          <th>Volume</th>
-          <th>Download</th>
-        </tr>
-      </table>
-      </div>
-      
-      <div class="container-fluid d-flex justify-content-center text-primary" style="margin-top:15px;text-decoration:underline;" id="showAll" onclick="showAllData()">‹‹ Show All ››</div> 
-      
-      <div class="footer">
-        <!-- Default Statcounter code for NovelPub https://www.novelpubfile.xyz -->
-  <script type="text/javascript">
-    var sc_project=12941872; 
-    var sc_invisible=0; 
-    var sc_security="786cf354"; 
-    var scJsHost = "https://";
-    document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
-  "statcounter.com/counter/counter.js'></"+"script>");
-  </script>
-  <noscript><div class="statcounter"><a title="Web Analytics Made Easy -
-  Statcounter" href="https://statcounter.com/" target="_blank"><img
-  class="statcounter" src="https://c.statcounter.com/12941872/0/786cf354/0/"
-  alt="Web Analytics Made Easy - Statcounter"
-  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovelPub</title>
+  <meta name="title" content="NovelPub"/>
+  <meta name="description" content="Download Novels for Free without ads"/>
+  <meta name="url" content="https://www.novelpubfile.xyz/"/>
+  <meta name="image" content="https://www.novelpubfile.xyz/novelpub-logo512.png"/>
+  <meta name="type" content="website"/>
+  <!-- Facebook Meta Tags -->
+  <meta name="og:title" content="NovelPub"/>
+  <meta name="og:description" content="Download Novels for Free without ads"/>
+  <meta name="og:url" content="https://www.novelpubfile.xyz/"/>
+  <meta name="og:image" content="https://www.novelpubfile.xyz/novelpub-logo512.png"/>
+  <meta name="og:type" content="website"/>
   
-  <!-- End of Statcounter Code -->
-  <a href="http://statcounter.com/p12941872/summary/?guest=1">View Site Stats</a>
+  <link rel="icon" href="https://www.novelpubfile.xyz/novelpub-logo512.png" size="512x512"/>
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
   
-        <p><a href="#">Terms & Privacy</a></p>
-        <p><a href="#">Contact Us</a></p>
-        <p><a href="#">Powered by Github</a></p>
-        <p><small><strong>Disclaimer:</strong> NovelPub does not owned any files from the server. All contents are provided by non-affiliated third parties site.</small></p>
-      </div>
-     
-    </div>
-      </div>
-
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        
-        let table = document.getElementById('table-item');
-        let table2 = document.getElementById('table-item2');
-        
-        async function loadData(){
-          const response = await fetch("https://warlock03.github.io/NovelPub-Data/data.json");
-          
-          if(!response.ok){
-            const message = "Could not fetch data from server. Please try to refresh page or contact the developer";
-            throw new Error(message);
-          }else{
-            const ads = document.getElementById('responseStatus');
-            ads.style.display = "block";
-            ads.style.color = "black";
-            ads.innerHTML = "Support The 4 Sigils author by buying the book on <a href='https://www.amazon.com/dp/B09B4BDYNV'>Amazon</a> & <a href='https://www.goodreads.com/book/show/76752875-the-4-sigils'>Goodreads.com</a>";
-          }
-          
-          const data = await response.json();
-          return data;
-          
-        }
-        
-        loadData().then(data => {
-          
-          for(let i in data){
-            let tr = document.createElement("tr");
-            let tr2 = document.createElement("tr");
-            /*tr.setAttribute("data-bs-toggle","modal");
-            tr.setAttribute("data-bs-target","#myModal");
-            tr2.setAttribute("data-bs-toggle","modal");
-            tr2.setAttribute("data-bs-target","#myModal");*/
-            let td1 = document.createElement("td");
-            let td2 = document.createElement("td");
-            let td3 = document.createElement("td");
-            let td4 = document.createElement("td");
-            let td5 = document.createElement("td");
-            let td6 = document.createElement("td");
-            let td7 = document.createElement("td");
-            let td8 = document.createElement("td");
-            let a = document.createElement("a");
-            let a2 = document.createElement("a");
-            a.setAttribute("href","");
-            a2.setAttribute("href","");
-            a.setAttribute("target","_blank");
-            a2.setAttribute("target","_blank");
-            let coverImage = document.createElement("img");
-            let coverImage2 = document.createElement("img");
-            coverImage.setAttribute("src","");
-            coverImage2.setAttribute("src","");
-           // cover.setAttribute("alt","");
-            
-            a.textContent = "Download";
-            a2.textContent = "Download";
-            a.href = data[i].dlLink;
-            a2.href = data[i].dlLink;
-            coverImage.src = data[i].cover;
-            coverImage2.src = data[i].cover;
-            
-            td1.textContent = data[i].title;
-            td5.textContent = data[i].title;
-            td3.textContent = data[i].updateVolume;
-            td7.textContent = data[i].updateVolume;
-           // cover.alt = data[i].title;
-            
-            td4.appendChild(a);
-            td8.appendChild(a2);
-            td2.appendChild(coverImage);
-            td6.appendChild(coverImage2);
-            
-            tr.appendChild(td1);
-            tr.appendChild(td2);
-            tr.appendChild(td3);
-            tr.appendChild(td4);
-            tr2.appendChild(td5);
-            tr2.appendChild(td6);
-            tr2.appendChild(td7);
-            tr2.appendChild(td8);
-            table.appendChild(tr);
-            table2.appendChild(tr2);
-            
-          }
-          
-        })
-        .catch(error => {
-          const errorMessage = document.getElementById('responseStatus');
-          errorMessage.innerHTML = error;
-          table.style.display = "none";
-          errorMessage.style.display = "flex";
-          console.log(error);
-          
-        });
-        
-        function myFunction() {
-          // Declare variables
-          var input, filter, tr, td, i, txtValue;
-          input = document.getElementById("search");
-          if(input.value == ""){
-            table.style.display = "block";
-            table2.style.display = "none";
-          }else{
-            table.style.display = "none";
-            table2.style.display = "block";
-            filter = input.value.toUpperCase();
-            tr = $("#table-item2 tr");
-            //tr = table2.getElementsByTagName("tr");
-            // Loop through all table rows, and hide those who don't match the search query
-            for (i = 0; i < tr.length; i++) {
-              td = tr[i].getElementsByTagName("td")[0];
-              if (td) {
-                  txtValue = td.textContent || td.innerText;
-                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                      tr[i].style.display = "";
-                  } else {
-                      tr[i].style.display = "none";
-                  }
-              }
-            }
-          }
-        }
-      </script>
-      <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-      <script src="main.js" type="text/javascript"></script>
-      <script>
-        kofiWidgetOverlay.draw('skyfreak', {
-          'type': 'floating-chat',
-          'floating-chat.donateButton.text': 'Support me',
-          'floating-chat.donateButton.background-color': '#00b9fe',
-          'floating-chat.donateButton.text-color': '#fff'
-        });
-    </script>
-  </body>
+	<div class="main-container">
+	  
+	  <div class="top-header">
+			<a href="#">
+				<h4 class="text-header"><strong>NovelPub</strong></h4>
+			</a>
+			<div class="input-container">
+				<input type="search" name="search-novel" id="search-novel" placeholder="Find Novel..." onkeyup="searchNovel()"/>
+				<ul id="search-list"></ul>
+			</div>
+	  </div>
+	<h5 style="text-align:center;" id="text-message">Welcome and enjoy using our site. If you like this site, please consider on supporting us</h5>
+	  <div class="support-container">
+			<a href='https://ko-fi.com/G2G3BK1D2' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+            <a href='https://sociabuzz.com/warlock_03/donate' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://www.novelpubfile.xyz/images.jpeg' border='0' alt='Buy Me a Coffee at sociabuzz.com' /></a>
+	  </div>
+	
+	<!-- Items display automatically everytime json files updated -->
+	<div class="item-display-container">
+		<ul id="items-display"></ul>
+		<div class="link-list"><a href="">Show All Novel List</a></div>
+	</div>
+	
+	<footer id="footer">
+	  <p><strong>Disclaimer:</strong> NovelPub does not store any files from it's server. All contents are provided by non-affiliated third parties</p>
+	  <p><a href="">Terms & Privacy Policy</a></p>
+	  <p><a href="mailto:warlock071603@gmail.com">Contact Us</a></p>
+	  <p>Powered by Github, Netlify & <a href="https://jikan.moe/">Jikan Moe Rest Api</a></p>
+	</footer>
+	
+	</div>
+	
+	<!-- Bootstrap JS CDN -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> <!-- Jquery CDN -->
+	<script type="text/javascript">
+	  
+	  async function fetchData(){
+	    const response = await fetch('https://warlock03.github.io/NovelPub-Data/data.json');
+	    
+	    if(!response.ok){
+	      const error = "Failed to fetch data. Please try refreshing the page";
+	      throw new Error(error);
+	    }
+	    
+	    const data = await response.json();
+	    return data;
+	  }
+	  
+	  fetchData()
+	  .then(data => {
+	    let itemContainer = document.getElementById('items-display');
+	    let searchList = document.getElementById('search-list');
+	
+	   for(let items in data){
+		
+	  	  let list = document.createElement('li');
+	  	  let list2 = document.createElement('li');
+	    	let linkData = document.createElement('a');
+	    	let linkData2 = document.createElement('a');
+		    let titleText = document.createElement('p');
+		    let titleText2 = document.createElement('p');
+		    let imgCover = document.createElement('img');
+		    let imgCover2 = document.createElement('img');
+	
+		    list.setAttribute('id','items-list');
+		    list2.setAttribute('id','search-list-item');
+	    	linkData.setAttribute('href','');
+	    	linkData2.setAttribute('href','');
+		    imgCover.setAttribute('src','');
+		    imgCover2.setAttribute('src','');
+		    imgCover.setAttribute('alt','');
+		    imgCover2.setAttribute('alt','');
+	
+		    let code;
+		    let code2;
+	
+		    imgCover.src = data[items].cover;
+		    imgCover2.src = data[items].cover;
+		    imgCover.alt = data[items].title;
+		    imgCover2.alt = data[items].title;
+	    	titleText.textContent = data[items].title;
+	    	titleText2.textContent = data[items].title;
+		    linkData.href = data[items].link;
+		    linkData2.href = data[items].link;
+		
+		    linkData.appendChild(imgCover);
+		    linkData2.appendChild(imgCover2);
+		    linkData.appendChild(titleText);
+		    linkData2.appendChild(titleText2);
+	    	list.appendChild(linkData);
+	    	list2.appendChild(linkData2);
+		
+		    itemContainer.appendChild(list);
+		    searchList.appendChild(list2);
+	  	
+	    }
+	  })
+	  .catch(error => console.log(error));
+	</script>
+	<script src="main.js"></script>
+</body>
 </html>
