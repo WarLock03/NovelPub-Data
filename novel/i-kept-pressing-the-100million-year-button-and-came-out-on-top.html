@@ -146,13 +146,6 @@
   	    title.textContent = allData.title;
   	    titleEnglish.textContent = "("+allData.title_english+")";
   	    document.title = allData.title;
-  	    document.querySelectorAll('meta[name=title]')[0].setAttribute('content', allData.title);
-  	    document.querySelectorAll('meta[name=description]')[0].setAttribute('content', allData.synopsis);
-  	    document.querySelectorAll('meta[property=og\\:title]')[0].setAttribute('content', allData.title);
-  	    document.querySelectorAll('meta[property=og\\:description]')[0].setAttribute('content', allData.synopsis);
-  	    document.querySelectorAll('meta[property=og\\:image]')[0].setAttribute('content', allData.images.jpg.large_image_url);
-  	    document.querySelectorAll('meta[name=:url]')[0].setAttribute('content', window.location.href);
-  	    document.querySelectorAll('meta[property=og\\:url]')[0].setAttribute('content', window.location.href);
   	    let allTitles = allData.titles;
   	    for(let listTitle in allTitles){
   	      let titleList_item = document.createElement("li");
