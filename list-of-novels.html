@@ -28,7 +28,7 @@
 	<h3 class="text-primary"><a href="/">« Go Back</a></h3>
 	
 	<div class="list-container">
-		<ol id="listofnovels"></ul>
+		<ol id="listofnovels"></ol>
 	</div>
 	
 	<footer id="footer">
@@ -79,7 +79,18 @@
 	    }
 	  })
 	  .catch(error => console.log(error));
+	
 	</script>
-	<script src="https://www.novelpubfile.xyz/main.js"></script>
+	<script>
+		$(document).ready(function(){
+			function Ascending_sort(a, b) { 
+                return ($(b).text().toUpperCase()) <  
+                    ($(a).text().toUpperCase()) ? 1 : -1;  
+            }
+            window.addEventListener("load", function(){
+            	$("ol li").sort(Ascending_sort).appendTo('ol'); 
+            });
+		});
+	</script>
 </body>
 </html>
