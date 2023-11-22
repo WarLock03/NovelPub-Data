@@ -134,7 +134,7 @@ input[type=search]{
   overflow: hidden;
   text-overflow: ellipsis;
 }
-#items-display li:nth-child(n+11){
+#items-display li:nth-child(n+17){
   display: none;
 }
 .link-list{
