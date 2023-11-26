@@ -160,7 +160,9 @@
       $("meta[property=og\\:image]").attr("content", imageDoc);
       $("meta[name=description]").attr("content", descriptionDoc);
       $("meta[property=og\\:description]").attr("content", descriptionDoc);
-      $("meta[name=url]").attr("content", urlDoc);
+      const url = "https://www.novelpubfile.xyz/?novel=" +titleDoc);
+      console.log(url);
+      $("meta[name=url]").attr("content", url);
       $("meta[property=og\\:url]").attr("content", urlDoc);
   	    
   	    let allTitles = allData.titles;
