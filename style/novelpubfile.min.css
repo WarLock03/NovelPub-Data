@@ -212,3 +212,57 @@ main {
   font-size: 12px;
   margin: 8px;
 }
+
+/* Page Content */
+.page-content{
+      margin-top: 40px;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .page-content #cover{
+      width: 200px;
+      height: auto;
+      border-radius: 8px;
+    }
+    .page-content h3, p{
+      text-align: center;
+      color: var(--light-text);
+    }
+    .page-content h3{
+      margin: 8px 5px 5px 5px;
+    }
+    .page-content p{
+      margin: 0;
+      padding: 5px;
+      font-style: italic;
+      font-size: 13px;
+    }
+    .page-details{
+      max-width: 100%;
+      margin: 8px 0;
+      padding: 0;
+    }
+    .page-details p{
+      text-align: left;
+      font-size: 14px;
+      padding: 5px;
+      margin: 0;
+    }
+    .page-details p span{
+      font-size: 13px;
+    }
+    .page-details ol{
+      list-style-type: none;
+      padding: 0 10px;
+      margin: 0 10px;
+    }
+    .page-details ol li{
+      font-size: 12px;
+    }
+    .page-details #genreList{
+      display: flex;
+      flex-direction: row;
+    }
