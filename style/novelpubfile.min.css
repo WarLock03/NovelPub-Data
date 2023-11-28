@@ -140,6 +140,7 @@ input[type=search]{
 #search-list li a p{
   font-size: 13px;
   margin: 8px;
+  color: var(--dark-text);
 }
 #search-list li a:active{
   color: #23a406;
