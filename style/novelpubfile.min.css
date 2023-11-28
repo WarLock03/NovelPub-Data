@@ -221,6 +221,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 13px;
 }
 .page-content{
       margin-top: 40px;
