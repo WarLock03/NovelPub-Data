@@ -273,3 +273,15 @@ main {
       display: flex;
       flex-direction: row;
     }
+    
+/* Spinner */
+#spinnerLoaderContainer{
+  display: block;
+}
+#spinnerLoader{
+  margin: 8px;
+}
+#spinnerLoader i{
+  font-size: 30px;
+  color: var(--light-text);
+}
