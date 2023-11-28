@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <meta name="title" content="Akuyaku Reijou Level 99: Watashi wa Ura-Boss desu ga Maou dewa Arimasen"/>
+    <meta name="description" content=""/>
+    <meta name="url" content=""/>
+    <meta name="image" content=""/>
+    <meta name="type" content="website"/>
+    <meta name="google-adsense-account" content="ca-pub-7768829589353921">
+    <!-- Facebook Meta Tags -->
+    <meta property="og:title" content="Akuyaku Reijou Level 99: Watashi wa Ura-Boss desu ga Maou dewa Arimasen"/>
+    <meta property="og:description" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content=""/>
+    
+    <link rel="icon" href="https://www.novelpubfile.xyz/novelpub-logo512.png" size="512x512"/>
+    <!-- Bootstrap CSS CDN -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7768829589353921"
+     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <script src="https://kit.fontawesome.com/8d333124e2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://www.novelpubfile.xyz/style/novelpubfile.min.css">
+  </head>
+  <body>
+    <div class="page-main-container">
+      
+      <div class="navigation-top">
+        <nav class="navigation">
+          <div class="nav-title" data-title="nav-title">NovelPubFile</div>
+          <div class="nav-menu" data-menu="nav-menu"><i class="fa-solid fa-bars" id="icon-menu"></i></div>
+          <div class="menu-content" data-collapse="menu-content">
+            <div class="menu-item">
+              <a href="/" class="menu-link">Home</a>
+            </div>
+            <div class="menu-item">
+              <a href="/list-of-novels.html" class="menu-link">List of Novels</a>
+            </div>
+            <div class="menu-item">
+              <a href="https://ko-fi.com/G2G3BK1D2" target="_blank" class="menu-link">Ko-Fi</a>
+            </div>
+            <div class="menu-item">
+              <a href="https://sociabuzz.com/warlock_03/donate" class="menu-link" target="_blank">Sociabuzz</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      
+
+      
+      <div class="page-content">
+        
+        <img id="cover" src=""/>
+        <h3 id="title"></h3>
+        <p id="title-english"></p>
+        <a href="https://cutt.ly/SwU4zGgm" class="btn btn-primary" target="_black">DOWNLOAD VOLUMES</a>
+      </div>
+      <div class="page-details">
+        <p><strong class="text-success">Titles:</strong>
+          <ol id="titleList"></ol>
+        </p>
+        <p><strong class="text-success">Type: </strong><span id="type"></span></p>
+        <p><strong class="text-success">Status: </strong><span id="status"></span></p>
+        <p><strong class="text-success">Genres:</strong>
+          <ol id="genreList"></ol>
+        </p>
+        <p><strong class="text-success">Synopsis</strong><br/><span id="synopsis"></span></p>
+      </div>
+      <hr/>
+      <div class="comment-system">
+        <div class="header-comment">
+          <i class="fa-solid fa-comment"></i>
+          <p>Comments</p>
+        </div>
+        <div id="disqus_thread"></div>
+        <script>
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://novelpubfile.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </div>
+      <hr/>
+      <div class="footer w3-container w3-center w3-text-white w3-padding">
+        <p><strong>Disclaimer:</strong> NovelPub does not store any files from it's server. All contents are provided by non-affiliated third parties</p>
+    	  <p><a href="">Terms & Privacy Policy</a></p>
+    	  <p><a href="mailto:warlock071603@gmail.com">Contact Us</a></p>
+    	  <p>Powered by Github, Netlify & <a href="https://jikan.moe/">Jikan Moe Rest Api</a></p>
+      </div>
+   
+    <!-- Bootstrap JS CDN -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/script/novelpubfile.min.js"></script>
+    <script type="text/javascript" src="/script/novel-items.js"></script>  
+  <script type="text/javascript">
+  $(document).ready(function(){
+    
+  	  async function fetchData(){
+  	    const response = await fetch("https://api.jikan.moe/v4/manga/126487/full");
+  	    if(!response.ok){
+  	      const error = response.message;
+  	      throw new Error(error);
+  	      
+  	    }
+  	    const data = await response.json();
+  	    return data;
+  	  }
+  	  
+  	  fetchData().then(data => {
+  	    
+  	    let cover, title, titleEnglish, titleList, statusText, typeText, genreList, synopsisText;
+  	    cover = document.getElementById('cover');
+  	    title = document.getElementById('title');
+  	    titleEnglish = document.getElementById('title-english');
+  	    titleList = document.getElementById('titleList');
+  	    genreList = document.getElementById('genreList');
+  	    statusText = document.getElementById('status');
+  	    typeText = document.getElementById('type');
+  	    synopsisText = document.getElementById('synopsis');
+  	    
+  	    let allData = data.data;
+  	    cover.src = allData.images.jpg.large_image_url;
+  		console.log(allData.images.jpg.large_image_url);
+  	    title.textContent = allData.title;
+  	    titleEnglish.textContent = "("+allData.title_english+")";
+  	    
+  	    let titleDoc, imageDoc, urlDoc, descriptionDoc;
+  	    titleDoc = allData.title;
+  	    imageDoc = allData.images.jpg.image_url;
+  	    urlDoc = window.location.href;
+  	    descriptionDoc = allData.synopsis;
+  	    //Page meta
+  	    document.title = allData.title;
+  	    $("meta[name=title]").attr("content", titleDoc);
+      $("meta[property=og\\:title]").attr("content", titleDoc);
+      $("meta[name=image]").attr("content", imageDoc);
+      $("meta[property=og\\:image]").attr("content", imageDoc);
+      $("meta[name=description]").attr("content", descriptionDoc);
+      $("meta[property=og\\:description]").attr("content", descriptionDoc);
+      $("meta[name=url]").attr("content", urlDoc);
+      $("meta[property=og\\:url]").attr("content", urlDoc);
+  	    
+  	    let allTitles = allData.titles;
+  	    for(let listTitle in allTitles){
+  	      let titleList_item = document.createElement("li");
+  	      titleList_item.textContent = allTitles[listTitle].type + ": " +allTitles[listTitle].title;
+  	      titleList.appendChild(titleList_item);
+  	    }
+  	    typeText.textContent = allData.type;
+  	    statusText.textContent = allData.status;
+  	    let allGenre = allData.genres;
+  	    for(let listGenre in allGenre){
+  	      let genreList_item = document.createElement("li");
+  	      genreList_item.textContent = allGenre[listGenre].name +", ";
+  	      genreList.appendChild(genreList_item);
+  	    }
+  	    
+  	    synopsisText.textContent = allData.synopsis;
+  	    
+  	  }).catch(error => console.log(error));
+  });
+  </script>
+  </body>
+</html>
