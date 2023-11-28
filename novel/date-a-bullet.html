@@ -9,6 +9,7 @@
     <meta name="url" content=""/>
     <meta name="image" content=""/>
     <meta name="type" content="website"/>
+    <meta name="google-adsense-account" content="ca-pub-7768829589353921">
     <!-- Facebook Meta Tags -->
     <meta property="og:title" content=""/>
     <meta property="og:description" content=""/>
@@ -18,6 +19,8 @@
     
     <link rel="icon" href="https://www.novelpubfile.xyz/novelpub-logo512.png" size="512x512"/>
     <!-- Bootstrap CSS CDN -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7768829589353921"
+     crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <script src="https://kit.fontawesome.com/8d333124e2.js" crossorigin="anonymous"></script>
@@ -47,9 +50,7 @@
         </nav>
       </div>
       
-      <div class="w3-center" id="spinnerLoaderContainer">
-        <div id="spinnerLoader"><i class="fa-solid fa-spinner fa-spin"></i></div>
-      </div>
+
       
       <div class="page-content">
         
@@ -98,24 +99,23 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="/script/novelpubfile.min.js"></script>
-    <script type="text/javascript" src="/script/novel-items.js"></script> 
+    <script type="text/javascript" src="/script/novel-items.js"></script>
   <script type="text/javascript">
   $(document).ready(function(){
-    $('#spinnerLoaderContainer').show();
+    
   	  async function fetchData(){
   	    const response = await fetch("https://api.jikan.moe/v4/manga/105347/full");
   	    if(!response.ok){
   	      const error = response.message;
   	      throw new Error(error);
-  	      $('#spinnerLoaderContainer').hide();
+  	      
   	    }
   	    const data = await response.json();
   	    return data;
   	  }
   	  
   	  fetchData().then(data => {
-  	    $('#spinnerLoaderContainer').hide();
-  	    
+
   	    let cover, title, titleEnglish, titleList, statusText, typeText, genreList, synopsisText;
   	    cover = document.getElementById('cover');
   	    title = document.getElementById('title');
