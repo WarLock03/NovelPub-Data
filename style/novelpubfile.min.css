@@ -293,10 +293,9 @@ main {
 .header-comment{
   display: flex;
   flex-direction: row;
-  justify-content: left;
-  align-items: left;
 }
 .header-comment i, .header-comment p{
   color: var(--light-text);
-  font-size: 30px;
+  font-size: 25px;
+  margin: 5px;
 }
