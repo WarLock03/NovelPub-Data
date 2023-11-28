@@ -285,3 +285,8 @@ main {
   font-size: 30px;
   color: var(--light-text);
 }
+.comment-system{
+  max-width: 100%;
+  height: auto;
+  padding: 20px;
+}
