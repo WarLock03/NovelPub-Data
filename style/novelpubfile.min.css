@@ -21,7 +21,10 @@ body{
 }
 .main-container{
   max-width: 100%;
-  height: inherit;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .navigation{
   max-width: inherit;
