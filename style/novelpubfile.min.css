@@ -249,7 +249,7 @@ main {
     .page-details{
       max-width: 100%;
       margin: 8px 0;
-      padding: 0;
+      padding: 0 10px;
     }
     .page-details p{
       text-align: left;
