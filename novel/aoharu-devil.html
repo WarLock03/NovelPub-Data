@@ -52,6 +52,11 @@
       </div>
       
       <div class="page-content">
+        
+        <div class="w3-center" id="spinnerLoaderContainer">
+          <div id="spinnerLoader"><i class="fa-solid fa-spinner fa-spin"></i></div>
+        </div>
+        
         <img id="cover" src=""/>
         <h3 id="title"></h3>
         <p id="title-english"></p>
@@ -88,14 +93,14 @@
   	    if(!response.ok){
   	      const error = response.message;
   	      throw new Error(error);
+  	      $('#spinnerLoaderContainer').hide(200);
   	    }
   	    const data = await response.json();
   	    return data;
   	  }
   	  
   	  fetchData().then(data => {
-  	    console.log(data.data);
-  	    
+  	    $('#spinnerLoaderContainer').hide(200);
   	    let cover, title, titleEnglish, titleList, statusText, typeText, genreList, synopsisText;
   	    cover = document.getElementById('cover');
   	    title = document.getElementById('title');
